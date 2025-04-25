@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFDBC2; 
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f7e9;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%; /* Ensure header takes full width */
+}
+
+/* Logo styling - Enlarged */
+.logo img {
+    width: 140px; /* Increased size for better visibility */
+    height: auto;
+}
+
+/* Search Bar Styling */
+.search-bar input {
+    padding: 10px 15px;
+    border: 2px solid black; /* Solid black border */
+    border-radius: 5px; /* Slightly rounded corners for a cleaner look */
+    width: 450px; /* Maintains longer search bar */
+    outline: none; /* Removes default outline */
+    transition: all 0.3s ease-in-out; /* Smooth effect */
+}
+
+/* Focus Effect */
+.search-bar input:focus {
+    transform: scale(1.02); /* Slight size increase on focus */
+    border: 2px solid black; /* Ensures border remains black */
+}
+
+/* Header buttons - More professional look */
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* General button styling */
+.header-buttons button {
+    background: none;
+    color: #000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    gap: 10px;
+    position: relative;
+}
+
+/* Icon Styling */
+.header-buttons button i {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Home button icon in black */
+.header-buttons button:first-child i {
+    color: #000;
+}
+
+/* Flowing underline effect (default for all buttons except exceptions) */
+.header-buttons button::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff7f50, #ff4500);
+    transition: width 0.4s ease-in-out;
+}
+
+/* On hover - underline expands */
+.header-buttons button:hover::after {
+    width: 100%;
+}
+
+/* Remove flowing underline & add orange background to Sell Your Art button */
+.header-buttons button:nth-child(2) {
+    background: #ff7f50;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Remove underline */
+.header-buttons button:nth-child(2)::after {
+    content: none;
+}
+
+/* Hover effect for Sell Your Art */
+.header-buttons button:nth-child(2):hover {
+    background: #ff4500;
+}
+
+/* Remove blue styling from Home */
+.header-buttons button:first-child {
+    color: #000;
+}
+
+/* Fix for Sign Up button styling (optional if needed) */
+.header-buttons button:nth-child(4) {
+    color: #007bff;
+}
+
+.header-buttons button:nth-child(4):hover {
+    color: #0056b3;
+}
+
+
+#cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: black; /* Adjust as needed */
+    padding: 8px 12px; /* Match button spacing */
+    margin-left:20px;
+}
+
+#cart-icon .cart-item-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    background: #e35f26;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sell_art {
+    position: relative;
+    width: 100%;
+    height: 550px; 
+    overflow: hidden;
+    margin-top: 96px; 
+}
+
+.sell_art img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover; 
+    
+}
+h2{
+    text-align: center;
+    margin-top: 20px;
+}
+.scrolling-gallery {
+    background-color: white; 
+    padding: 15px 0;
+    margin-top: -5px; 
+    /* overflow: hidden;
+    white-space: nowrap; */
+}
+.gallery-text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.left{
+   
+    width:40%;
+    float: left;
+    height: 700px;
+    background: linear-gradient(to bottom, #e98074, #E8A16D, #E8A16D, #f19d61, #ecd0b0);
+    
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    padding-right: 40px;
+    margin-top: 150px;
+    font-family: Poppins, sans-serif;
+    font-size: 36px;
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+
+
+}
+h4{
+    color: rgb(30, 26, 26);
+    text-align: center;
+    padding-right: 40px;
+    font-family: Poppins,sans-serif;
+    font-size: 20px;
+    
+}
+
+.right{
+    
+    width:50%;
+    float: right;
+    height:600px;
+
+    
+    
+}
+.line{
+    width:2px;
+    background-color: black;
+    height:auto;
+    float:left;
+}
+.Register{
+    font-family: Poppins,sans-serif;
+    background-color: #ecd0b0;
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    margin-left:130px;
+    width: 200px;
+    height: 8%;
+    border-radius: 5px;
+    opacity: 3px;
+    font-family: Poppins,serif;
+    color: black;
+   
+}
+.note{
+    color: white;
+    text-align: center;
+    padding-right: 40px;
+    font-family:sans-serif;
+    font-size: smaller;
+}
+.details{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.step {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+#step1,#step2,#step3,#step4{
+    font-family: Poppins,sans-serif;
+}
+.file{
+    font-size:15px;
+    font-weight: bold;
+}
+#fileUpload{
+    margin-top: 5px;
+    color: black;
+    font-size:smaller;
+    border: #444;
+}
+.dropdown-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, #e98074, #E8A16D, #E8A16D, #f19d61);
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-label::after {
+    content: "▼"; 
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    padding: 10px;
+    background: rgb(248, 236, 236);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: smaller;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .dropdown-label::after {
+    content: "▲"; 
+}
+
+input[type="checkbox"]:checked + .dropdown-label + .dropdown-content {
+    display: block;
+}
+.promote{
+    margin-top: 50px;
+    font-size: small;
+    text-align: center;
+    margin-right:40px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

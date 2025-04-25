@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafts Shop</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    
+    
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="./logo.jpg" alt="Handcrafts Shop Logo" />
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search products...">
+    </div>
+    <div class="header-buttons">
+        <button onclick="location.href='../home.html'">
+            <i class="fas fa-home"></i> Home
+        </button>
+        <button onclick="location.href='../sellurart/sell_ur_art.html'">
+            <i class="fas fa-paint-brush"></i> Sell Your Art
+        </button>
+        <a href="../cart.html" id="cart-icon">
+            <div class="cart-icon-container">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-item-count">0</span>
+            </div>
+        </a>
+        
+        <!-- Sign Up Button -->
+        <button id="signupBtn" onclick="location.href='../login/sign-up.html'">
+            <i class="fas fa-user"></i> Sign Up
+        </button>
+
+        <!-- Profile Button (hidden by default) -->
+        <button id="profileBtn" onclick="location.href='../profile/profile.html'" style="display: none; background: none; border: none; padding: 0;">
+            <img src="./profile/profile.png" alt="Profile" style="width: 40px; height: 40px; border-radius: 50%;" />
+        </button>
+    </div>
+</header>
+
+  
+    
+    <div class="product-slider">
+        <button class="product-btn" onclick="location.href='./Paintings/index.html'">
+            <i class="fas fa-paint-brush"></i> Arts & Paintings
+        </button>
+        
+        <button class="product-btn" onclick="location.href='./pottery/pottery.html'">
+            <i class="fas fa-mug-hot"></i> Pottery & Ceramics
+        </button>
+        
+        <button class="product-btn" onclick="location.href='./jewellery/jewellery.html'">
+            <i class="fas fa-gem"></i> Jewellery
+        </button>
+        
+        
+        
+        <button class="product-btn" onclick="location.href='./stationary/stationery.html'">
+            <i class="fas fa-pencil-ruler"></i> Stationery
+        </button>
+        
+        <button class="product-btn" onclick="location.href='./Gifts_page/gifts.html'">
+            <i class="fas fa-gift"></i> Gifts
+        </button>
+        
+        <button class="product-btn" onclick="location.href='./candles/candles.html'">
+            <i class="fas fa-burn"></i> Candles & Scents
+        </button>
+        
+        <button class="product-btn" onclick="location.href='./phonecases/phone.html'">
+            <i class="fas fa-mobile-alt"></i> Phone Cases
+        </button>
+        
+        <button class="product-btn" onclick="location.href='./crochets/crochets.html'">
+            <i class="fas fa-hand-holding-heart"></i> Crochets
+        </button>
+        
+        <button class="product-btn" onclick="location.href='./keychains/keychains.html'">
+            <i class="fas fa-key"></i> Keychains
+        </button>
+        
+    </div>
+    
+
+
+     <!-- Video Section -->
+     <section class="video-section">
+        <video autoplay loop muted class="video-bg">
+            <source src="main page.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay">
+            <h1>Experience Viora</h1>
+            <p>Where Art Meets Passion & Every Piece Tells a Story</p>
+        </div>
+    </section>
+    <section class="scrolling-gallery">
+        <div class="gallery-track">
+            <div class="gallery-text">
+                EXPLORE VIORA &nbsp; EXPLORE VIORA &nbsp; EXPLORE VIORA &nbsp; EXPLORE VIORA &nbsp;
+            </div>
+            <div class="gallery-text">
+                EXPLORE VIORA &nbsp; EXPLORE VIORA &nbsp; EXPLORE VIORA &nbsp; EXPLORE VIORA &nbsp;
+            </div>
+        </div>
+    </section>
+    
+    <section id="trending" class="trending-section">
+        <div class="trending-content">
+            <h2>TRENDING</h2>
+        <span>Discover the Most Loved <br>Handmade Creations🔥</span>
+            <p><i>Fall in love with designs <br>from up-and-coming artists today.</i></p>
+            <button class="btn1" onclick="location.href='#products'" >Scroll up</button>
+        </div>
+    </section>
+   
+    <section class="products" id="products">
+        <div class="products-container">
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn" onclick="toggleWishlist(this)"></i>
+                <img src="./assets/teasset.jpeg" alt="Tea set">
+                <h3 class="title">Strawberry Tea Set</h3>
+                <p class="price">₹659</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/pillow1.jpeg" alt="Pillow Cover">
+                <h3 class="title">Embroidery Cushion Cover</h3>
+                <p class="price">₹345</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/mudcont.jpeg" alt="cookware">
+                <h3 class="title">Terracotta Cookware Set</h3>
+                <p class="price">₹649</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/paintedpot.jpeg" alt="Clay pots">
+                <h3 class="title">Hand-Painted Clay Pots</h3>
+                <p class="price">₹499</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/file.jpeg" alt="Folders">
+                <h3 class="title">Floral Document Folders</h3>
+                <p class="price">₹239</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/keychains.jpeg" alt="keychains">
+                <h3 class="title">Set of Keychains</h3>
+                <p class="price">₹169</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/guitar.jpeg" alt="guitar painting">
+                <h3 class="title">Painting of Guitar</h3>
+                <p class="price">₹799</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/vase.jpeg" alt="vase">
+                <h3 class="title">Donut Flower Vase</h3>
+                <p class="price">₹550</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+        </div>
+    </section>
+    
+    
+
+
+    <section id="NewArrivals" class="New-arrivals">
+        <div class="new-content">
+        <h2>NEW  <br> ARRIVALS</h2>  
+        <span>Alert!!📢<br> &nbsp; &nbsp;Handcrafted Treasures Just In🛒</span>
+            <p><i>Shop the Newest Arrivals Now!</i></p>
+            <button class="btn1" onclick="location.href='#products2'">Shop</button>
+        </div>
+    </section>
+
+
+    <section class="products2" id="products2"> 
+        <div class="products2-container"> 
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/painting1.jpg" alt="Tea set">
+                <h3 class="title">Sunset Floral Painting</h3>
+                <p class="price">₹525</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/paiting2.jpg" alt="guitar painting">
+                <h3 class="title">Daisy Canvas Art</h3>
+                <p class="price">₹653</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/crochet1.jpg" alt="Crochet Napkin">
+                <h3 class="title">Crochet Napkin</h3>
+                <p class="price">₹320</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/croceht2.jpg" alt="Strawberry Pouch">
+                <h3 class="title">Strawberry Crochet Pouch</h3>
+                <p class="price">₹550</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/potteryq.jpg" alt="Pottery Bowl">
+                <h3 class="title">Handcrafted Pottery Bowl</h3>
+                <p class="price">₹750</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/pottery2.jpg" alt="Planter">
+                <h3 class="title">Smiley Hanging Planter</h3>
+                <p class="price">₹850</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/cndle1.jpg" alt="Scented Candle">
+                <h3 class="title">Aromatic Scented Candle</h3>
+                <p class="price">₹450</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/candle2.jpg" alt="Black Candle">
+                <h3 class="title">Minimalist Black Candle</h3>
+                <p class="price">₹500</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+        </div>
+    </section>
+    
+
+    <section id="BestSellers" class="BestSeller">
+        <div class="bs-content">
+            <h2>BEST SELLERS</h2>
+           <span> &nbsp; &nbsp;&nbsp; &nbsp; Shop our bestsellers and bring home timeless handmade elegance!🛍️🎨</span>
+           
+        </div>
+    </section>  
+    <section class="products" id="products">
+        <div class="products-container">
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/pad.jpeg" alt="Pen Case">
+                <h3 class="title">Asthetic Exam Pads</h3>
+                <p class="price">₹659</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/1pc Solid Pen Case.jpeg" alt="Pouch">
+                <h3 class="title">Multi Zipped Pouch</h3>
+                <p class="price">₹345</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/keychain.jpeg" alt="Keychain">
+                <h3 class="title">Acrylic Keychains</h3>
+                <p class="price">₹649</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/vase2.jpeg" alt="Mason Jars">
+                <h3 class="title">Decorated Mason Jars</h3>
+                <p class="price">₹499</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/perl.jpeg" alt="Necklace">
+                <h3 class="title">Pearl Layered Necklace</h3>
+                <p class="price">₹239</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/bow.jpeg" alt="Hairband">
+                <h3 class="title">Floral Resin Hairband</h3>
+                <p class="price">₹169</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/case.jpeg" alt="Phonecase">
+                <h3 class="title">Vintage Phonecase</h3>
+                <p class="price">₹799</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <i class="fas fa-heart like-btn"></i>
+                <img src="./assets/earring.jpeg" alt="Earrings">
+                <h3 class="title">Beaded Dangling Earrings</h3>
+                <p class="price">₹550</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+    
+        </div>
+    </section>
+    
+
+    <marquee direction="right" scrollamount="10" scrolldelay="100" bgcolor="#d35400" 
+    onmouseenter="this.stop()" onmouseout="this.start()">
+    <span class="marquee-text">OFFERS | EXPLORE &nbsp; ✨ OFFERS | EXPLORE &nbsp; ✨ OFFERS | EXPLORE &nbsp; ✨</span>
+    </marquee>
+
+    <section class="offer">
+        <div class="op">
+            <div class="opimage">
+                <img src="./assets/sale.png" alt="sale">
+            </div>
+            <div class="p2">
+                <h2>SUMMER SALE</h2><br>
+                <h4>Get up to 70% off</h4>
+                <p>🌞 Huge Summer Sale! 🛍️ Enjoy up to 70% OFF on your favorite handmade crafts.Don't miss out – shop now before the offer ends! ⏳🎉</p>
+                <a href="#" class="button" onclick="location.href='../offer/offer.html'">SHOP SALE</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="Services" class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <img src="./assets/service1.jpg" alt="Shop Handmade Treasures">
+                <h3>Shop Handmade Treasures</h3>
+                <p>Discover a wide range of unique, handmade items crafted with love.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="./assets/service2.jpg" alt="Sell Your Creations">
+                <h3>Sell Your Creations</h3>
+                <p>Turn your passion into profit by selling your handmade crafts.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="./assets/service3.jpg" alt="Customize Your Favorites">
+                <h3>Customize Your Favorites</h3>
+                <p>Personalize products to match your style and preferences.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Floating Chat Icon -->
+
+    <div class="chat-float-btn" onclick="toggleChat()">
+      <img src="./chat-bot.png" alt="Chatbot" class="chat-icon">
+    </div>
+    
+  
+ 
+
+<!-- Chatbot Container -->
+<div class="chat-container" id="chat-container">
+  <div class="chat-header">Viora Bot 🤖</div>
+  <div class="chat-box" id="chat-box"></div>
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Ask me anything..." />
+    <button class="send-btn" onclick="sendMessage()">Send</button>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-section about">
+          <h3>About Us</h3>
+          <p>Viora is your one-stop destination to explore beautiful handmade crafts including paintings, pottery, phone cases, and much more. We ensure top-quality, unique products loved by our community.</p>
+          <img src="logo.jpg" alt="Viora Logo" class="footer-logo">
+      </div>
+
+      <div class="footer-section">
+          <h3>Let us Help You</h3>
+          <p><a href="./login/sign-up.html">Your Account</a></p>
+          <p><a href="./cart.html">Your Orders</a></p>
+          <p><a href="#">Shipping Rates and Policies</a></p>
+          <p><a href="#">Returns</a></p>
+          <p><a href="#">Help</a></p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <p><a href="./sellurart/sell_ur_art.html">Sell Your Art</a></p>
+          <p><a href="#trending">Trending Section</a></p>
+          <p><a href="#NewArrivals">New Arrivals</a></p>
+          <p><a href="#BestSellers">Bestsellers</a></p>
+          <p><a href="./offer/offer.html">Offer Page</a></p>
+      </div>
+
+      <!-- Follow Us (next to Quick Links) -->
+      <div class="footer-section social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      <div class="language-selector">
+          <!-- Google Translate Widget -->
+          <div id="google_translate_element"></div>
+      </div>
+      <p>100% ORIGINAL guarantee for all products at Viora | Return within 14 days of receiving your order</p>
+  </div>
+
+  <button id="backToTop">Back to Top</button>
+</footer>
+
+<!-- Add Google Translate Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+          pageLanguage: 'en',  // Set your default page language
+          includedLanguages: 'en,hi,bn,te,ta,ml,gu,mr,kn,pa,or,as,mai,ur,ne,sd,si,ps,bo,sw,tl,ar,de,it,fr,es,ru,zh,ja,ko', // All Indian languages + popular languages
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+  }
+
+  (function() {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      document.body.appendChild(script);
+  })();
+
+
+        function toggleWishlist(icon) {
+            icon.classList.toggle('liked');
+    
+            // You can show a toast message or perform any action here
+            if (icon.classList.contains('liked')) {
+                console.log('Added to wishlist');
+            } else {
+                console.log('Removed from wishlist');
+            }
+        }
+        //search bar
+
+        
+        const faqResponses = [
+        {
+    keywords: ["hi", "hello", "hey", "greetings"],
+    response: "Hey there! 👋 I'm Viora Bot. How can I help you today?"
+  },
+  {
+    keywords: ["what is viora", "about viora", "viora platform", "viora marketplace"],
+    response: "Viora is an online marketplace where you can buy and sell handmade products from artisans around the world."
+  },
+  {
+    keywords: ["how to buy", "buy product", "purchase", "order item"],
+    response: "To buy products on Viora, browse the categories, select a product, click 'Buy Now', and fill in your delivery details. We offer secure payment options!"
+  },
+  {
+    keywords: ["how to sell", "sell product", "become seller", "list items"],
+    response: "You can sell your handmade products by creating a seller account, uploading your product details, and setting your prices. We help with payment and shipping!"
+  },
+  {
+    keywords: ["custom phone case", "personalized phone", "phone cover","phone case"],
+    response: "Yes, we offer custom-made phone cases. Choose a design or request a personalized one!"
+  },
+  {
+    keywords: ["phone case material", "case made of", "type of phone case"],
+    response: "Our phone cases come in wood, silicone, leather, resin, and more. Check each product's description for details."
+  },
+  {
+    keywords: ["handmade jewellery", "unique jewellery", "rings", "necklaces", "bracelets", "earrings","jewellery"],
+    response: "Yes! We have a variety of handmade jewelry, including rings, necklaces, bracelets, and earrings made by skilled artisans."
+  },
+  {
+    keywords: ["custom jewellery", "personalized jewellery", "jewellery request"],
+    response: "Absolutely! Many sellers offer custom jewelry. Contact them via their store page to make a request."
+  },
+  {
+    keywords: ["original art", "paintings", "art for home", "wall art","art"],
+    response: "Yes, we offer original paintings and artwork from talented artists in our 'Arts and Paintings' category."
+  },
+  {
+    keywords: ["art commission", "custom painting", "art request"],
+    response: "Many artists on Viora accept commissions. You can message them directly through their profile!"
+  },
+  {
+    keywords: ["pottery", "ceramics", "handmade mugs", "vases", "bowls"],
+    response: "We have a wide range of handmade pottery and ceramics, perfect for both everyday use and decoration!"
+  },
+  {
+    keywords: ["matching pottery", "pottery set", "ceramic set"],
+    response: "Yes! Many sellers offer matching sets. Check the product description or contact the seller."
+  },
+  {
+    keywords: ["keychains", "custom keychain", "personalized keychains"],
+    response: "Yes! Explore our keychains category — we offer custom and handmade options in leather, wood, resin, and more."
+  },
+  {
+    keywords: ["gift", "birthday present", "anniversary gift", "personalized gifts"],
+    response: "Viora is perfect for unique, thoughtful handmade gifts. Check out our 'Personalized Gifts' or 'Birthday Specials' sections!"
+  },
+  {
+    keywords: ["gift wrapping", "wrap my gift", "package gift"],
+    response: "Some sellers offer gift wrapping. Look on the product page or contact the seller for more info."
+  },
+  {
+    keywords: ["crochet", "knitted", "crochet scarf", "crochet blanket"],
+    response: "Yes! We have handmade crochet items like scarves, hats, blankets, and more — all made with love!"
+  },
+  {
+    keywords: ["custom crochet", "crochet order", "crochet design"],
+    response: "Yes, many crochet artists accept custom requests. Just reach out to them directly!"
+  },
+  {
+    keywords: ["candles", "scented candles", "wax items"],
+    response: "Yes! We offer handmade candles in various fragrances, shapes, and sizes. Perfect for home ambiance!"
+  },
+  {
+    keywords: ["stationery", "notebooks", "journals", "planners", "handmade paper"],
+    response: "We have beautiful handmade journals, notebooks, and planners. Great for writing, drawing, or gifting!"
+  },
+  {
+    keywords: ["custom stationery", "logo notebook", "branded journal"],
+    response: "Yes! Many sellers offer custom stationery. Contact them for personalized designs with logos or names."
+  },
+  {
+    keywords: ["problem placing order", "order issue", "checkout not working"],
+    response: "Make sure your payment info and shipping details are correct. Still stuck? Email us at support@viora.com."
+  },
+  {
+    keywords: ["track order", "order status", "shipment"],
+    response: "After your order is shipped, you'll get a tracking link via email. You can also check 'My Orders' in your account."
+  },
+  {
+    keywords: ["delivery time", "when will i get", "shipping duration","delivery"],
+    response: "Most orders are delivered within 5–7 business days depending on your location."
+  },
+  {
+    keywords: ["cancel order", "change order", "edit purchase"],
+    response: "If the seller hasn't processed the order yet, you can cancel or modify it. Contact them or our support team quickly!"
+  },
+  {
+    keywords: ["payment methods", "how to pay", "credit card", "upi"],
+    response: "We accept all major cards, UPI, wallets, and net banking. Payments are secure and encrypted!"
+  },
+  {
+    keywords: ["return policy", "refund", "exchange"],
+    response: "Returns are generally accepted within 7 days for damaged or incorrect items. Check each product page for exact policy."
+  },
+  {
+    keywords: ["create account", "sign up", "register"],
+    response: "Click on 'Sign Up' at the top of the page and fill in your details. It only takes a minute!"
+  },
+  {
+    keywords: ["forgot password", "reset password", "can’t login"],
+    response: "No worries! Click on 'Forgot Password?' on the login page and check your email for the reset link."
+  },
+  {
+    keywords: ["sell on viora", "upload product", "start selling","sell","sell ur art"],
+    response: "To sell, visit the 'Seller Registration' page, create your profile, and start uploading your items!"
+  },
+  {
+    keywords: ["manage orders", "seller dashboard", "track seller order"],
+    response: "Sellers can manage orders via their dashboard — update tracking, communicate with buyers, and more."
+  },
+  {
+    keywords: ["recommend gift", "suggest gift", "best gift"],
+    response: "Sure! Check out our 'Personalized Gifts' or 'Birthday Specials'. Need help picking? Just ask!"
+  },
+  {
+    keywords: ["eco-friendly", "green products", "sustainable items"],
+    response: "Yes! Explore our Eco-Friendly Collection for sustainable handmade items 🌱"
+  },
+  {
+    keywords: ["what can you do", "help", "features"],
+    response: "Hi! 👋 I can help with shopping, tracking orders, seller support, or even gift recommendations. Just type your question!"
+  },
+  {
+    keywords: ["fun fact", "something interesting", "handmade fact"],
+    response: "Fun Fact: Every handmade item is unique and one-of-a-kind. No two are exactly alike! 💖"
+  },
+  {
+    keywords: ["bye","Thank you","great","good advice"],
+    response: "Thank you, I am glad i could help. If u have any other questions You can reach out....Happy Shopping!!🛍"
+  },
+  {
+  keywords: ["payment status", "check payment", "payment successful", "was my payment successful", "payment update", "confirm payment"],
+  response: "You can check your payment status in the 'My Orders' section of your account. If your payment was successful, you’ll see a confirmation and order ID there. Still unsure? Reach out to support@viora.com!"
+}
+
+];
+
+function getChatbotResponse(userMessage) {
+  const msg = userMessage.toLowerCase().trim();
+
+  for (let entry of faqResponses) {
+    for (let keyword of entry.keywords) {
+      if (msg.includes(keyword)) {
+        return entry.response;
+      }
+    }
+  }
+
+  return "Hmm, I'm still learning! Try asking about our products or how to use the site.";
+}
+
+function toggleChat() {
+  const chatContainer = document.getElementById("chat-container");
+  chatContainer.style.display = chatContainer.style.display === "flex" ? "none" : "flex";
+}
+
+function sendMessage() {
+  const input = document.getElementById("user-input");
+  const message = input.value.trim();
+  if (!message) return;
+
+  appendMessage(message, "user");
+  input.value = "";
+
+  setTimeout(() => {
+    const response = getChatbotResponse(message);
+    appendMessage(response, "bot");
+  }, 600);
+}
+
+function appendMessage(message, sender) {
+  const chatBox = document.getElementById("chat-box");
+  const msgWrapper = document.createElement("div");
+  msgWrapper.className = sender;
+
+  const icon = document.createElement("div");
+  icon.className = sender === "user" ? "user-icon" : "bot-icon";
+  icon.textContent = sender === "user" ? "🧑" : "🤖";
+
+  const text = document.createElement("div");
+  text.className = "text";
+  text.textContent = message;
+
+  msgWrapper.appendChild(icon);
+  msgWrapper.appendChild(text);
+
+  chatBox.appendChild(msgWrapper);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+  //userprofile
+  window.addEventListener("DOMContentLoaded", () => {
+    const userId = localStorage.getItem("loggedInUserId");
+    const signupBtn = document.getElementById("signupBtn");
+    const profileBtn = document.getElementById("profileBtn");
+
+    if (userId) {
+      signupBtn.style.display = "none";
+      profileBtn.style.display = "inline-block";
+    } else {
+      signupBtn.style.display = "inline-block";
+      profileBtn.style.display = "none";
+    }
+  });
+
+ 
+
+
+</script>
+
+ 
+
+</body>
+</html>
+
+

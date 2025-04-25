@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafts Shop</title>
+    <link rel="stylesheet" href="stylepen.css">
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="../logo.jpg" alt="Handcrafts Shop Logo" />
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+        </div>
+        <div class="header-buttons">
+            <button onclick="location.href='../home.html'">
+                <i class="fas fa-home"></i> Home
+            </button>
+            <button onclick="location.href='../sellurart/sell_ur_art.html'">
+                <i class="fas fa-paint-brush"></i> Sell Your Art
+            </button>
+            <a href="../cart.html" id="cart-icon">
+                <div class="cart-icon-container">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-item-count">0</span>
+                </div>
+            </a>
+          
+        </div>
+    </header>
+    
+    <section class="banner">
+        <img src="./stionerybg.jpg" alt="Arts and Paintings">
+        <div class="banner-overlay">
+            <h1>STATIONARY ITEMS</h1>
+            <button class="shop-now-btn" onclick="scrollToProducts()">SHOP NOW</button>
+        </div>
+    </section>
+    <section class="scrolling-gallery">
+        <div class="gallery-text">
+            STATIONERY HUB &nbsp; STATIONERY HUB &nbsp; STATIONERY HUB &nbsp; STATIONERY HUB &nbsp; STATIONERY HUB &nbsp;
+        </div>
+    </section>
+   <section id="product-list" class="product-gallery">
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./allinonepens.jpg" alt="All in one pens">
+            <h3 class="title">Bear-Themed Multi-Color Pens</h3>
+            <p class="price">₹180</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./ballpens.jpg" alt="Ball pens">
+            <h3 class="title">BallPoint pens set of 6 </h3>
+            <p class="price">₹120</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./calculator.jpg" alt="calculater ">
+            <h3 class="title">Aesthetic Soft-Touch Calculator</h3>
+            <p class="price">₹699</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./dairy.jpg" alt="Dairy">
+            <h3 class="title">Cute Peach-Themed Dairy</h3>
+            <p class="price">₹350</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./erasers.jpg" alt="cute erasers">
+            <h3 class="title">2pc Soap shaped Erasers</h3>
+            <p class="price">₹30</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./exam pads.jpg" alt="planks">
+            <h3 class="title">2pc Cute Exam pads</h3>
+            <p class="price">₹600</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./highlighters.jpg" alt="Highlighters">
+            <h3 class="title">6pc Pastel Highlighters</h3>
+            <p class="price">₹300</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./notebooks.jpg" alt="notebooks">
+            <h3 class="title">4pc Sprial Notebooks</h3>
+            <p class="price">₹400</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./pouch.jpg" alt="pouche">
+            <h3 class="title">Pastel Pouch</h3>
+            <p class="price">₹250</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./sharpners.jpg" alt="Sharpners">
+            <h3 class="title">3pc Cute Sharpners</h3>
+            <p class="price">₹45</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./scale.jpg" alt="Scales">
+            <h3 class="title">2pc 15cm floral scales</h3>
+            <p class="price">₹20</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./stickynotes.jpg" alt="Sticky notes">
+            <h3 class="title">DailyPlan Sticky Notes</h3>
+            <p class="price">₹169</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Viora is your one-stop destination to explore beautiful handmade crafts including paintings, pottery, phone cases, and much more. We ensure top-quality, unique products loved by our community.</p>
+                <img src="../logo.jpg" alt="Viora Logo" class="footer-logo">
+            </div>
+    
+            <div class="footer-section">
+                <h3>Let us Help You</h3>
+                <p><a href="../login_viora/sign-up.html">Your Account</a></p>
+                <p><a href="../cart.html">Your Orders</a></p>
+                <p><a href="#">Shipping Rates and Policies</a></p>
+                <p><a href="#">Returns</a></p>
+                <p><a href="#">Help</a></p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <p><a href="../sellurart/sell_ur_art.html">Sell Your Art</a></p>
+                <p><a href="#trending">Trending Section</a></p>
+                <p><a href="#NewArrivals">New Arrivals</a></p>
+                <p><a href="#BestSellers">Bestsellers</a></p>
+                <p><a href="../offer/offer.html">Offer Page</a></p>
+            </div>
+    
+            <!-- Follow Us (next to Quick Links) -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="language-selector">
+                <!-- Google Translate Widget -->
+                <div id="google_translate_element"></div>
+            </div>
+            <p>100% ORIGINAL guarantee for all products at Viora | Return within 14 days of receiving your order</p>
+        </div>
+    
+        <button id="backToTop">Back to Top</button>
+    </footer>
+    
+    <!-- Add Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',  // Set your default page language
+                includedLanguages: 'en,hi,bn,te,ta,ml,gu,mr,kn,pa,or,as,mai,ur,ne,sd,si,ps,bo,sw,tl,ar,de,it,fr,es,ru,zh,ja,ko', // All Indian languages + popular languages
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    
+        (function() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.body.appendChild(script);
+        })();
+    
+    
+    
+    
+        document.getElementById("backToTop").addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        function scrollToProducts() {
+    const productSection = document.getElementById('product-list');
+    const targetPosition = productSection.offsetTop;
+    const startPosition = window.pageYOffset; 
+    const distance = targetPosition - startPosition; 
+    const duration = 2000; 
+    let startTime = null;
+
+    function scrollAnimation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const scrollAmount = easeInOut(timeElapsed, startPosition, distance, duration);
+
+        window.scrollTo(0, scrollAmount);
+
+        if (timeElapsed < duration) {
+            requestAnimationFrame(scrollAnimation);
+        }
+    }
+    function easeInOut(time, start, change, duration) {
+        time /= duration / 2;
+        if (time < 1) return (change / 2) * time * time + start;
+        time--;
+        return (-change / 2) * (time * (time - 2) - 1) + start;
+    }
+
+    requestAnimationFrame(scrollAnimation);
+}
+
+
+    </script>
+    
+    
+    
+
+</body>
+</html>

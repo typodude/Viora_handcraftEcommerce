@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #FFCDCD;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inder', sans-serif;
+        }
+        /* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f7e9;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%; /* Ensure header takes full width */
+}
+
+/* Logo styling - Enlarged */
+.logo img {
+    width: 140px; /* Increased size for better visibility */
+    height: auto;
+}
+
+/* Search Bar Styling */
+.search-bar input {
+    padding: 10px 15px;
+    border: 2px solid black; /* Solid black border */
+    border-radius: 5px; /* Slightly rounded corners for a cleaner look */
+    width: 450px; /* Maintains longer search bar */
+    outline: none; /* Removes default outline */
+    transition: all 0.3s ease-in-out; /* Smooth effect */
+}
+
+/* Focus Effect */
+.search-bar input:focus {
+    transform: scale(1.02); /* Slight size increase on focus */
+    border: 2px solid black; /* Ensures border remains black */
+}
+
+/* Header buttons - More professional look */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    margin-right:20px;
+}
+
+/* General button styling */
+.header-buttons button {
+    background: none;
+    color: #000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    gap: 10px;
+    position: relative;
+}
+
+/* Icon Styling */
+.header-buttons button i {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Home button icon in black */
+.header-buttons button:first-child i {
+    color: #000;
+}
+
+/* Flowing underline effect (default for all buttons except exceptions) */
+.header-buttons button::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff7f50, #ff4500);
+    transition: width 0.4s ease-in-out;
+}
+
+/* On hover - underline expands */
+.header-buttons button:hover::after {
+    width: 100%;
+}
+
+/* Remove flowing underline & add orange background to Sell Your Art button */
+.header-buttons button:nth-child(2) {
+    background: #ff7f50;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Remove underline */
+.header-buttons button:nth-child(2)::after {
+    content: none;
+}
+
+/* Hover effect for Sell Your Art */
+.header-buttons button:nth-child(2):hover {
+    background: #ff4500;
+}
+
+/* Remove blue styling from Home */
+.header-buttons button:first-child {
+    color: #000;
+}
+
+/* Fix for Sign Up button styling (optional if needed) */
+.header-buttons button:nth-child(4) {
+    color: #007bff;
+}
+
+.header-buttons button:nth-child(4):hover {
+    color: #0056b3;
+}
+
+
+#cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: black; /* Adjust as needed */
+    padding: 8px 12px; /* Match button spacing */
+    margin-right:20px;
+}
+
+#cart-icon .cart-item-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    background: #e35f26;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .sale-section {
+            background-color: #FFFFFF;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+        .sale-msg {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+            font-size: 20px;
+            color: #000000;
+            font-weight: bold;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: #FFCDCD;
+        }
+        .product{
+            position: relative;  
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .title {
+            font-size: 16px;
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+        }
+        .price {
+            color: #FF5733;
+            font-size: 14px;
+        }
+        .mrp {
+            font-size: 12px;
+            text-decoration: line-through;
+            color: #555;
+        }
+        .stars {
+            color: gold;
+            font-size: 16px;
+        }
+        .like-btn {
+            position: absolute;
+            top: 15px;  
+            right: 15px;
+            font-size: 20px;
+            color: rgb(255, 128, 128);
+            background: white;
+            padding: 8px; 
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            opacity: 0.8;
+        }
+        .like-btn:hover {
+            transform: scale(1.2);
+            color: rgb(247, 24, 24);
+            opacity: 1;
+        }
+        .cart-btn {
+            background: #E98074;
+            color: white;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s ease-in-out;
+        }
+        .cart-btn:hover {
+            background: rgb(119, 13, 13);
+        }
+        .footer {
+            background-color: #CB9B9B;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            color: #000;
+        }
+        .footer-logo img {
+            width: 100px;
+        }
+        .footer-language select {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            font-family: 'Inder', sans-serif;
+        }
+        .footer-text {
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer-icons a {
+            margin: 0 15px;
+            color: #000;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .footer-icons a:hover {
+            color: #555;
+        }
+        footer {
+    background-color: #f6f7e9;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 15px;
+    color: #444;
+    text-decoration: none;
+    margin: 6px 0;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.footer-section.about p {
+    max-width: 90%;
+    font-size: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    font-size: 40px; /* Bigger icons */
+    color: #555;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.3);
+    color: #ff6347;
+}
+
+.social-icon .fa-facebook-f {
+    color: #3b5998;
+}
+
+.social-icon .fa-instagram {
+    color: #e1306c;
+}
+
+.social-icon .fa-envelope {
+    color: #f39c12;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: -10px;
+
+}
+
+.language-selector select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    margin-bottom: -1px;
+    height:10px;
+}
+
+#backToTop {
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 25px auto 0;
+    display: block;
+    transition: background 0.3s;
+    
+}
+
+#backToTop:hover {
+    background-color: #444;
+}
+@media (min-width: 992px) {
+    .quick-links, .social {
+      flex: 1 1 200px;
+      display: inline-block;
+      vertical-align: top;
+    }
+}
+.footer-section.about {
+    flex: 2; /* Makes About Us section a bit wider */
+    min-width: 280px;
+    padding: 10px;
+    margin-right:20px;
+}
+
+.footer-section.about p {
+    text-align: justify; /* Justifies the paragraph */
+    line-height: 1.6;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-top: 15px;
+    display: block;
+}
+/* Hide scrollbar for all browsers */
+html, body {
+    height: 100%;
+    overflow: hidden;  
+  }
+  
+  body {
+    overflow-y: scroll; 
+  }
+  
+
+  body::-webkit-scrollbar {
+    display: none; 
+  }
+  
+ 
+  body {
+    scrollbar-width: none;  
+  }
+  
+  #x{
+    margin-top:20px;
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./logo.jpg" alt="Handcrafts Shop Logo" />
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+        </div>
+        <div class="header-buttons">
+            <button onclick="location.href='../home.html'">
+                <i class="fas fa-home"></i> Home
+            </button>
+            <button onclick="location.href='../sellurart/sell_ur_art.html'">
+                <i class="fas fa-paint-brush"></i> Sell Your Art
+            </button>
+            <a href="../cart.html" id="cart-icon">
+                <div class="cart-icon-container">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-item-count">0</span>
+                </div>
+            </a>
+           
+        </div>
+    </header>
+    
+    <img src="TOP.jpg" alt="Gallery Image">
+    <div class="sale-section">
+        <div class="sale-msg">
+            ON SALE | ON SALE | ON SALE | ON SALE | ON SALE | ON SALE | ON SALE | ON SALE | ON SALE ON SALE | ON SALE | ON SALE | ON SALE | ON SALE | ON SALE
+        </div>
+    </div>
+    
+    <section class="product-gallery">
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="hairband.jpg" alt="Sunflower Plain Hairband for Girls">
+            <h3 class="title">Sunflower Plain Hairband for Girls</h3>
+            <p class="price">Offer price: ₹139</p>
+            <p class="mrp">M.R.P: ₹275</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="pouch.jpg" alt="Leather pouches">
+            <h3 class="title">Leather pouches for pen or pencil holder</h3>
+            <p class="price">Offer price: ₹236</p>
+            <p class="mrp">M.R.P: ₹499</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="stickers.jpg" alt="Cool glossy stickers">
+            <h3 class="title">Cool glossy stickers, Laminated</h3>
+            <p class="price">Offer price: ₹749</p>
+            <p class="mrp">M.R.P: ₹1999</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="bowl.jpg" alt="Ceramic Storage Bowl">
+            <h3 class="title">Ceramic Storage Bowl with Lid</h3>
+            <p class="price">Offer price: ₹749</p>
+            <p class="mrp">M.R.P: ₹1495</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="plates.jpg" alt="Ceramic Snacks Plate Combo">
+            <h3 class="title">Ceramic Snacks Plate Combo (4Pcs)</h3>
+            <p class="price">Offer price: ₹899</p>
+            <p class="mrp">M.R.P: ₹1499</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="books.jpg" alt="A5 Cute Notebook">
+            <h3 class="title">A5 Cute Notebook, Ruled - 160 pages</h3>
+            <p class="price">Offer price: ₹407</p>
+            <p class="mrp">M.R.P: ₹899</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="tapes.jpg" alt="Ideal WASHI Tape Set for Designs">
+            <h3 class="title">Ideal WASHI Tape Set for Designs</h3>
+            <p class="price">Offer price: ₹159</p>
+            <p class="mrp">M.R.P: ₹599</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="keychains.jpg" alt="Keychains or Keyrings - Set of 5">
+            <h3 class="title">Keychains or Keyrings - Set of 5</h3>
+            <p class="price">Offer price: ₹249</p>
+            <p class="mrp">M.R.P: ₹499</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="painting.jpg" alt="Lord Ganesh Wall Painting 18X18 in">
+            <h3 class="title">Lord Ganesh Wall Painting 18X18 in</h3>
+            <p class="price">Offer price: ₹349</p>
+            <p class="mrp">M.R.P: ₹795</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="pens.jpg" alt="Aesthetic Cute Bubble Highlighters">
+            <h3 class="title">Aesthetic Cute Bubble Highlighters</h3>
+            <p class="price">Offer price: ₹179</p>
+            <p class="mrp">M.R.P: ₹265</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="pots.jpg" alt="Ceramic Pots with Lids - Set of 3">
+            <h3 class="title">Ceramic Pots with Lids - Set of 3</h3>
+            <p class="price">Offer price: ₹399</p>
+            <p class="mrp">M.R.P: ₹799</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="keyrings.jpg" alt="Handcrafted Keyrings - Set of 4">
+            <h3 class="title">Handcrafted Keyrings - Set of 4</h3>
+            <p class="price">Offer price: ₹179</p>
+            <p class="mrp">M.R.P: ₹299</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Viora is your one-stop destination to explore beautiful handmade crafts including paintings, pottery, phone cases, and much more. We ensure top-quality, unique products loved by our community.</p>
+                <img src="../logo.jpg" alt="Viora Logo" class="footer-logo">
+            </div>
+    
+            <div class="footer-section">
+                <h3>Let us Help You</h3>
+                <p><a href="../login_viora/sign-up.html">Your Account</a></p>
+                <p><a href="../cart.html">Your Orders</a></p>
+                <p><a href="#">Shipping Rates and Policies</a></p>
+                <p><a href="#">Returns</a></p>
+                <p><a href="#">Help</a></p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <p><a href="../sellurart/sell_ur_art.html">Sell Your Art</a></p>
+                <p><a href="#trending">Trending Section</a></p>
+                <p><a href="#NewArrivals">New Arrivals</a></p>
+                <p><a href="#BestSellers">Bestsellers</a></p>
+                <p><a href="../offer/offer.html">Offer Page</a></p>
+            </div>
+    
+            <!-- Follow Us (next to Quick Links) -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="language-selector">
+                <!-- Google Translate Widget -->
+                <div id="google_translate_element"></div>
+            </div>
+            <p id="x">100% ORIGINAL guarantee for all products at Viora | Return within 14 days of receiving your order</p>
+        </div>
+    
+        <button id="backToTop">Back to Top</button>
+    </footer>
+    
+    <!-- Add Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',  // Set your default page language
+                includedLanguages: 'en,hi,bn,te,ta,ml,gu,mr,kn,pa,or,as,mai,ur,ne,sd,si,ps,bo,sw,tl,ar,de,it,fr,es,ru,zh,ja,ko', // All Indian languages + popular languages
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    
+        (function() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.body.appendChild(script);
+        })();
+    
+    
+    
+    
+        document.getElementById("backToTop").addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        </script>
+
+
+</body>
+</html>

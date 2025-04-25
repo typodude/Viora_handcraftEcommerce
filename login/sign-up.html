@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up Page</title>
+        <link rel="stylesheet" href="sign.css">
+        <script type="module" src="sign.js" defer></script>
+    </head>
+    <body>
+        <h1>SIGN UP</h1>
+        <form >
+            <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+            <div class="formfill" id="signup">
+                <label class="mail">Enter Full Name</label><br>
+                <input type="text" class="inputs" id="fullName" required><br><br><br>
+                
+                <label class="mail">Enter Email</label><br>
+                <input type="email" class="inputs" id="rEmail" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email address"><br><br><br>
+                
+                <label class="password">Enter Password</label><br>
+                <input type="password" class="inputs" id="rPassword" required minlength="8" title="Password must be at least 8 characters long, include a number, an uppercase and lowercase letter, and a special character (!@#$%^&*)"><br>
+                <p class="hint">Must be at least 8 characters, include an uppercase, lowercase, number, and special character (!@#$%^&*).</p>
+                
+                <button class="submit" type="submit" id="submitSignUp" >Sign up</button>
+                
+                <p class="login-link">Already have an account? <a href="index.html">Login</a></p>
+            </div>
+        </form>
+    </body>
+</html>

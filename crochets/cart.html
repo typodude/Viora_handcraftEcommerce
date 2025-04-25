@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-cart-shopping"></i> Your Cart</h1>
+        <a href="../home.html" class="home-btn">Home</a>
+    </header>
+
+    <div class="cart-container">
+        <div id="cart-items"></div>
+        <button id="checkout-all">Buy All</button> <!-- Buy Now for all items -->
+        <button id="clear-cart">Clear Cart</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+            function displayCart() {
+                const cartItemsContainer = document.getElementById("cart-items");
+                cartItemsContainer.innerHTML = ""; // Clear existing content
+        
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+                    return;
+                }
+        
+                cart.forEach((item, index) => {
+                    const cartItem = document.createElement("div");
+                    cartItem.classList.add("cart-item");
+                    cartItem.innerHTML = `
+                        <img src="${item.image}" alt="${item.title}">
+                        <div class="cart-item-details">
+                            <h3>${item.title}</h3>
+                            <p>Offer price: ${item.price}</p>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn decrease" data-index="${index}">-</button>
+                                <span class="quantity">${item.quantity}</span>
+                                <button class="quantity-btn increase" data-index="${index}">+</button>
+                            </div>
+                        </div>
+                        <button class="buy-now-btn" data-index="${index}">Buy Now</button>
+                        <button class="delete-btn" data-index="${index}">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    `;
+                    cartItemsContainer.appendChild(cartItem);
+                });
+        
+                document.querySelectorAll(".delete-btn").forEach((btn) => {
+                    btn.addEventListener("click", (event) => {
+                        const index = event.target.closest(".delete-btn").dataset.index;
+                        cart.splice(index, 1);
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                        displayCart();
+                    });
+                });
+        
+                document.querySelectorAll(".quantity-btn").forEach((btn) => {
+                    btn.addEventListener("click", (event) => {
+                        const index = event.target.dataset.index;
+                        if (event.target.classList.contains("increase")) {
+                            cart[index].quantity++;
+                        } else if (cart[index].quantity > 1) {
+                            cart[index].quantity--;
+                        }
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                        displayCart();
+                    });
+                });
+        
+                document.querySelectorAll(".buy-now-btn").forEach((btn) => {
+                    btn.addEventListener("click", (event) => {
+                        const index = event.target.dataset.index;
+                        alert(`Buying: ${cart[index].title} - ${cart[index].quantity} pcs`);
+                        // Redirect to payment or checkout page
+                    });
+                });
+        
+                document.getElementById("checkout-all").addEventListener("click", () => {
+                    if (cart.length === 0) {
+                        alert("Cart is empty!");
+                        return;
+                    }
+                    alert("Buying all items in the cart!");
+                    // Redirect to bulk checkout page
+                });
+            }
+        
+            document.getElementById("clear-cart").addEventListener("click", () => {
+                localStorage.removeItem("cart");
+                cart = [];
+                displayCart();
+            });
+        
+            displayCart();
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-cart-shopping"></i> Your Cart</h1>
+        <a href="../home.html" class="home-btn">Home</a>
+    </header>
+
+    <div class="cart-container">
+        <div id="cart-items"></div>
+        <button id="checkout-all">Buy All</button>
+        <button id="clear-cart">Clear Cart</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+            function displayCart() {
+                const cartItemsContainer = document.getElementById("cart-items");
+                cartItemsContainer.innerHTML = "";
+
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+                    return;
+                }
+
+                let totalPrice = 0;
+
+                cart.forEach((item, index) => {
+                    const itemPrice = parseFloat(item.price.replace(/[^\d.-]/g, "")) * item.quantity;
+
+                    totalPrice += itemPrice;
+
+                    const cartItem = document.createElement("div");
+                    cartItem.classList.add("cart-item");
+                    cartItem.innerHTML = `
+                        <img src="${item.image}" alt="${item.title}">
+                        <div class="cart-item-details">
+                            <h3>${item.title}</h3>
+                            <p>Offer price: ${item.price}</p>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn decrease" data-index="${index}">-</button>
+                                <span class="quantity">${item.quantity}</span>
+                                <button class="quantity-btn increase" data-index="${index}">+</button>
+                            </div>
+                        </div>
+                        <button class="buy-now-btn" data-index="${index}">Buy Now</button>
+                        <button class="delete-btn" data-index="${index}">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    `;
+                    cartItemsContainer.appendChild(cartItem);
+                });
+
+                // 👇 Total Price element
+                const totalPriceElement = document.createElement("div");
+                totalPriceElement.classList.add("total-price");
+                totalPriceElement.innerHTML = `<h2>Total Price: ₹${totalPrice.toFixed(2)}</h2>`;
+                cartItemsContainer.appendChild(totalPriceElement);
+
+                document.querySelectorAll(".delete-btn").forEach((btn) => {
+                    btn.addEventListener("click", (event) => {
+                        const index = event.target.closest(".delete-btn").dataset.index;
+                        cart.splice(index, 1);
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                        displayCart();
+                    });
+                });
+
+                document.querySelectorAll(".quantity-btn").forEach((btn) => {
+                    btn.addEventListener("click", (event) => {
+                        const index = event.target.dataset.index;
+                        if (event.target.classList.contains("increase")) {
+                            cart[index].quantity++;
+                        } else if (cart[index].quantity > 1) {
+                            cart[index].quantity--;
+                        }
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                        displayCart();
+                    });
+                });
+
+                document.querySelectorAll(".buy-now-btn").forEach((btn) => {
+                    btn.addEventListener("click", (event) => {
+                        const index = event.target.dataset.index;
+                        alert(`Buying: ${cart[index].title} - ${cart[index].quantity} pcs`);
+                        // Move to orders
+                        const orderItem = cart[index];
+                        const userId = localStorage.getItem("loggedInUserId");
+
+                        const db = firebase.firestore();
+                        const orderRef = db.collection("users").doc(userId).collection("orders").doc();
+                        orderRef.set(orderItem); // Save to orders
+
+                        // Remove from cart after purchase
+                        cart.splice(index, 1);
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                        displayCart();
+                    });
+                });
+
+                document.getElementById("checkout-all").addEventListener("click", () => {
+                    if (cart.length === 0) {
+                        alert("Cart is empty!");
+                        return;
+                    }
+                    alert("Buying all items in the cart!");
+                    // You can redirect to a bulk checkout page here
+                });
+            }
+
+            document.getElementById("clear-cart").addEventListener("click", () => {
+                localStorage.removeItem("cart");
+                cart = [];
+                displayCart();
+            });
+
+            displayCart();
+        });
+    </script>
+</body>
+</html>

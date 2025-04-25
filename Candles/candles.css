@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFDBC2; 
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f7e9;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%; /* Ensure header takes full width */
+}
+
+/* Logo styling - Enlarged */
+.logo img {
+    width: 140px; /* Increased size for better visibility */
+    height: auto;
+}
+
+/* Search Bar Styling */
+.search-bar input {
+    padding: 10px 15px;
+    border: 2px solid black; /* Solid black border */
+    border-radius: 5px; /* Slightly rounded corners for a cleaner look */
+    width: 450px; /* Maintains longer search bar */
+    outline: none; /* Removes default outline */
+    transition: all 0.3s ease-in-out; /* Smooth effect */
+}
+
+/* Focus Effect */
+.search-bar input:focus {
+    transform: scale(1.02); /* Slight size increase on focus */
+    border: 2px solid black; /* Ensures border remains black */
+}
+
+/* Header buttons - More professional look */
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* General button styling */
+.header-buttons button {
+    background: none;
+    color: #000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    gap: 10px;
+    position: relative;
+}
+
+/* Icon Styling */
+.header-buttons button i {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Home button icon in black */
+.header-buttons button:first-child i {
+    color: #000;
+}
+
+/* Flowing underline effect (default for all buttons except exceptions) */
+.header-buttons button::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff7f50, #ff4500);
+    transition: width 0.4s ease-in-out;
+}
+
+/* On hover - underline expands */
+.header-buttons button:hover::after {
+    width: 100%;
+}
+
+/* Remove flowing underline & add orange background to Sell Your Art button */
+.header-buttons button:nth-child(2) {
+    background: #ff7f50;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Remove underline */
+.header-buttons button:nth-child(2)::after {
+    content: none;
+}
+
+/* Hover effect for Sell Your Art */
+.header-buttons button:nth-child(2):hover {
+    background: #ff4500;
+}
+
+/* Remove blue styling from Home */
+.header-buttons button:first-child {
+    color: #000;
+}
+
+/* Fix for Sign Up button styling (optional if needed) */
+.header-buttons button:nth-child(4) {
+    color: #007bff;
+}
+
+.header-buttons button:nth-child(4):hover {
+    color: #0056b3;
+}
+
+
+#cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: black; /* Adjust as needed */
+    padding: 8px 12px; /* Match button spacing */
+    margin-left:20px;
+}
+
+#cart-icon .cart-item-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    background: #e35f26;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 750px; 
+    overflow: hidden;
+    margin-top: 20px; 
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black; /* Black outline effect */
+}
+
+
+.banner-overlay h1 {
+    font-size: 60px; 
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.shop-now-btn {
+    background-color: #d35400; 
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: default; 
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.shop-now-btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+.scrolling-gallery {
+    background-color: white; 
+    padding: 15px 0;
+    margin-top: -5px; 
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.gallery-text {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    animation: scrollText 15s linear infinite; 
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #FFDBC2; 
+}
+
+.product {
+    position: relative;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 250px; /* Set to a single value */
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.product h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #d35400;
+    font-size: 18px;
+}
+
+.stars {
+    color: gold;
+    font-size: 16px;
+}
+
+.product img {
+    width: 100%;
+    height: 250px; /* Set to a single value */
+    object-fit: cover;
+    border-radius: 10px;
+}
+.like-btn {
+    position: absolute;
+    top: 15px;  
+    right: 15px;
+    font-size: 20px;
+    color: rgb(255, 128, 128);
+    background: white;
+    padding: 8px; 
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    opacity: 0.8; 
+}
+
+.like-btn:hover {
+    transform: scale(1.2);
+    color: rgb(247, 24, 24);
+    opacity: 1;
+}
+
+.cart-btn {
+    background: #E98074;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.cart-btn:hover {
+    background: rgb(119, 13, 13);
+}
+footer {
+    background-color: #f6f7e9;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 15px;
+    color: #444;
+    text-decoration: none;
+    margin: 6px 0;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.footer-section.about p {
+    max-width: 90%;
+    font-size: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    font-size: 40px; /* Bigger icons */
+    color: #555;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.3);
+    color: #ff6347;
+}
+
+.social-icon .fa-facebook-f {
+    color: #3b5998;
+}
+
+.social-icon .fa-instagram {
+    color: #e1306c;
+}
+
+.social-icon .fa-envelope {
+    color: #f39c12;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.language-selector select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+#backToTop {
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 25px auto 0;
+    display: block;
+    transition: background 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #444;
+}
+@media (min-width: 992px) {
+    .quick-links, .social {
+      flex: 1 1 200px;
+      display: inline-block;
+      vertical-align: top;
+    }
+}
+.footer-section.about {
+    flex: 2; /* Makes About Us section a bit wider */
+    min-width: 280px;
+    padding: 10px;
+    margin-right:20px;
+}
+
+.footer-section.about p {
+    text-align: justify; /* Justifies the paragraph */
+    line-height: 1.6;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-top: 15px;
+    display: block;
+}

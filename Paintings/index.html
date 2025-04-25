@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafts Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="../logo.jpg" alt="Handcrafts Shop Logo" />
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+        </div>
+        <div class="header-buttons">
+            <button onclick="location.href='../home.html'">
+                <i class="fas fa-home"></i> Home
+            </button>
+            <button onclick="location.href='../sellurart/sell_ur_art.html'">
+                <i class="fas fa-paint-brush"></i> Sell Your Art
+            </button>
+            <a href="../cart.html" id="cart-icon">
+                <div class="cart-icon-container">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-item-count">0</span>
+                </div>
+            </a>
+            
+          
+        </div>
+    </header>
+    
+    <section class="banner">
+        <img src="banner.jpg" alt="Arts and Paintings">
+        <div class="banner-overlay">
+            <h1>ARTS AND PAINTINGS</h1>
+            <button class="shop-now-btn" onclick="scrollToProducts()">SHOP NOW</button>
+        </div>
+    </section>
+
+    <section class="scrolling-gallery">
+        <div class="gallery-text">
+            GALLERY OF EXPRESSION &nbsp; GALLERY OF EXPRESSION &nbsp; GALLERY OF EXPRESSION &nbsp; GALLERY OF EXPRESSION &nbsp; GALLERY OF EXPRESSION &nbsp;
+        </div>
+    </section>
+
+    <section id="product-list" class="product-gallery">
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="krishna-art.jpg" alt="Lord Krishna Art">
+            <h3 class="title">Lord Krishna Art | Traditional art | Canvas Painting</h3>
+            <p class="price">₹2,899</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="sunset-painting.jpg" alt="Mature Art Scenic Painting">
+            <h3 class="title">Mature art scenic painting | Canvas painting for decor</h3>
+            <p class="price">₹296</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="guitar-painting.jpg" alt="Guitar Painting">
+            <h3 class="title">Guitar painting canvas prints for wall frames/ home decor</h3>
+            <p class="price">₹1,699</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="mountain-painting.jpg" alt="Green Mountain Nature Canvas">
+            <h3 class="title">Green mountain nature canvas painting for wall decors</h3>
+            <p class="price">₹2,367</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="ganesh-painting.jpg" alt="Ganesh Painting">
+            <h3 class="title">UV coated framed religious painting of Lord Ganesh Ji</h3>
+            <p class="price">₹337</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="sunflower-art.jpg" alt="Sunflower Canvas">
+            <h3 class="title">Sunflowers – Wall art | Canvas painting | Nature</h3>
+            <p class="price">₹237</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="leavesSun.jpg" alt="Leaves Sun">
+            <h3 class="title">Elegant 3 piece art of nature, leaves sun | Canvas arts</h3>
+            <p class="price">₹259</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="butterfly.jpg" alt="Butterfly">
+            <h3 class="title">Aesthetic Butterfly framed canvas painting</h3>
+            <p class="price">₹239</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="sunset.jpg" alt="Sunset">
+            <h3 class="title">Beautiful Sunset Landscape canvas painting</h3>
+            <p class="price">₹889</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="flowerVase.jpg" alt="Flower Vase">
+            <h3 class="title">Oil Painting | Flowervase | Canvas painting</h3>
+            <p class="price">₹599</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="abstractart.jpg" alt="oil Painting">
+            <h3 class="title">Large Size Oil Painting | Wall Art On Canvas | No Frame </h3>
+            <p class="price">₹899</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="watercolor.jpg" alt="Watercolor">
+            <h3 class="title">Watercolor | Digital Art | Abstract Face Art</h3>
+            <p class="price">₹1,199</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Viora is your one-stop destination to explore beautiful handmade crafts including paintings, pottery, phone cases, and much more. We ensure top-quality, unique products loved by our community.</p>
+                <img src="../logo.jpg" alt="Viora Logo" class="footer-logo">
+            </div>
+    
+            <div class="footer-section">
+                <h3>Let us Help You</h3>
+                <p><a href="../login_viora/sign-up.html">Your Account</a></p>
+                <p><a href="../cart.html">Your Orders</a></p>
+                <p><a href="#">Shipping Rates and Policies</a></p>
+                <p><a href="#">Returns</a></p>
+                <p><a href="#">Help</a></p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <p><a href="../sellurart/sell_ur_art.html">Sell Your Art</a></p>
+                <p><a href="#trending">Trending Section</a></p>
+                <p><a href="#NewArrivals">New Arrivals</a></p>
+                <p><a href="#BestSellers">Bestsellers</a></p>
+                <p><a href="../offer/offer.html">Offer Page</a></p>
+            </div>
+    
+            <!-- Follow Us (next to Quick Links) -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="language-selector">
+                <!-- Google Translate Widget -->
+                <div id="google_translate_element"></div>
+            </div>
+            <p>100% ORIGINAL guarantee for all products at Viora | Return within 14 days of receiving your order</p>
+        </div>
+    
+        <button id="backToTop">Back to Top</button>
+    </footer>
+    
+    <!-- Add Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',  // Set your default page language
+                includedLanguages: 'en,hi,bn,te,ta,ml,gu,mr,kn,pa,or,as,mai,ur,ne,sd,si,ps,bo,sw,tl,ar,de,it,fr,es,ru,zh,ja,ko', // All Indian languages + popular languages
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    
+        (function() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.body.appendChild(script);
+        })();
+    
+    
+    
+    
+        document.getElementById("backToTop").addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        function scrollToProducts() {
+    const productSection = document.getElementById('product-list');
+    const targetPosition = productSection.offsetTop;
+    const startPosition = window.pageYOffset; 
+    const distance = targetPosition - startPosition; 
+    const duration = 2000; 
+    let startTime = null;
+
+    function scrollAnimation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const scrollAmount = easeInOut(timeElapsed, startPosition, distance, duration);
+
+        window.scrollTo(0, scrollAmount);
+
+        if (timeElapsed < duration) {
+            requestAnimationFrame(scrollAnimation);
+        }
+    }
+    function easeInOut(time, start, change, duration) {
+        time /= duration / 2;
+        if (time < 1) return (change / 2) * time * time + start;
+        time--;
+        return (-change / 2) * (time * (time - 2) - 1) + start;
+    }
+
+    requestAnimationFrame(scrollAnimation);
+}
+
+
+    </script>
+    
+    
+
+</body>
+</html>

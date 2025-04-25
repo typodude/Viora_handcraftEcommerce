@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafts Shop</title>
+    <link rel="stylesheet" href="gifts.css">
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="../logo.jpg" alt="Handcrafts Shop Logo" />
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+        </div>
+        <div class="header-buttons">
+            <button onclick="location.href='../home.html'">
+                <i class="fas fa-home"></i> Home
+            </button>
+            <button onclick="location.href='../sellurart/sell_ur_art.html'">
+                <i class="fas fa-paint-brush"></i> Sell Your Art
+            </button>
+            <a href="../cart.html" id="cart-icon">
+                <div class="cart-icon-container">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-item-count">0</span>
+                </div>
+            </a>
+            
+            
+        </div>
+    </header>
+    
+    <section class="banner">
+        <img src="./img/banners.jpeg" alt="Arts and Paintings">
+        <div class="banner-overlay">
+            <h1>HANDPICKED PRESENTS</h1>
+            <button class="shop-now-btn" onclick="scrollToProducts()">SHOP NOW</button>
+        </div>
+    </section>
+    <section id="product-list" class="product-gallery">
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/handmade-jewelry.jpeg" alt="Handmade Jewelry">
+            <h3 class="title">Handmade Beaded Bracelet | Customizable Gift</h3>
+            <p class="price">₹299</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/wooden-photo-frame.jpeg" alt="Wooden Photo Frame">
+            <h3 class="title">Personalized Wooden Photo Frame | Perfect Gift</h3>
+            <p class="price">₹399</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/customized-mug.jpeg" alt="Customized Mug">
+            <h3 class="title">Customizable Coffee Mug | Personalized Gift</h3>
+            <p class="price">₹179</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/handmade-candle.jpeg" alt="Handmade Scented Candle">
+            <h3 class="title">Handcrafted Scented Candle | Relaxing Gift</h3>
+            <p class="price">₹249</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/hand-painted-canvas.jpeg" alt="Hand-Painted Canvas">
+            <h3 class="title">Hand-Painted Canvas Art | Artistic Home Decor</h3>
+            <p class="price">₹599</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/embroidered-pillow.jpeg" alt="Embroidered Pillow">
+            <h3 class="title">Embroidered Pillow | Cozy Home Gift</h3>
+            <p class="price">₹349</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/handmade-journal.jpeg" alt="Handmade Journal">
+            <h3 class="title">Handmade Leather Journal | Thoughtful Gift</h3>
+            <p class="price">₹499</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/wooden-keychain.jpeg" alt="Wooden Keychain">
+            <h3 class="title">Engraved Wooden Keychain | Personalized Gift</h3>
+            <p class="price">₹199</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/fabric-tote-bag.jpeg" alt="Fabric Tote Bag">
+            <h3 class="title">Handmade Fabric Tote Bag | Eco-friendly Gift</h3>
+            <p class="price">₹349</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/plant-in-pot.jpeg" alt="Plant in Pot">
+            <h3 class="title">Small Potted Plant | Natural Gift</h3>
+            <p class="price">₹199</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/handmade-soap-set.jpeg" alt="Handmade Soap Set">
+            <h3 class="title">Handmade Soap Set | Natural Skincare Gift</h3>
+            <p class="price">₹249</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/fashion-accessories.jpeg" alt="Fashion Accessories">
+            <h3 class="title">Handmade Fashion Accessories | Trendy Gift</h3>
+            <p class="price">₹299</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/ceramic-mug.jpeg" alt="Ceramic Mug">
+            <h3 class="title">Handmade Ceramic Mug | Cozy Coffee Gift</h3>
+            <p class="price">₹199</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/handmade-leather-handbag.jpeg" alt="Handmade Leather Handbag">
+            <h3 class="title">Handmade Leather Handbag | Classic & Stylish</h3>
+            <p class="price">₹1,299</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="./img/personalized-leather-wallet.jpeg" alt="Personalized Leather Wallet">
+            <h3 class="title">Personalized Leather Wallet | Stylish Gift for Him</h3>
+            <p class="price">₹599</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    </section>
+        
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Viora is your one-stop destination to explore beautiful handmade crafts including paintings, pottery, phone cases, and much more. We ensure top-quality, unique products loved by our community.</p>
+                <img src="../logo.jpg" alt="Viora Logo" class="footer-logo">
+            </div>
+    
+            <div class="footer-section">
+                <h3>Let us Help You</h3>
+                <p><a href="../login_viora/sign-up.html">Your Account</a></p>
+                <p><a href="../cart.html">Your Orders</a></p>
+                <p><a href="#">Shipping Rates and Policies</a></p>
+                <p><a href="#">Returns</a></p>
+                <p><a href="#">Help</a></p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <p><a href="../sellurart/sell_ur_art.html">Sell Your Art</a></p>
+                <p><a href="#trending">Trending Section</a></p>
+                <p><a href="#NewArrivals">New Arrivals</a></p>
+                <p><a href="#BestSellers">Bestsellers</a></p>
+                <p><a href="../offer/offer.html">Offer Page</a></p>
+            </div>
+    
+            <!-- Follow Us (next to Quick Links) -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="language-selector">
+                <!-- Google Translate Widget -->
+                <div id="google_translate_element"></div>
+            </div>
+            <p>100% ORIGINAL guarantee for all products at Viora | Return within 14 days of receiving your order</p>
+        </div>
+    
+        <button id="backToTop">Back to Top</button>
+    </footer>
+    
+    <!-- Add Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',  // Set your default page language
+                includedLanguages: 'en,hi,bn,te,ta,ml,gu,mr,kn,pa,or,as,mai,ur,ne,sd,si,ps,bo,sw,tl,ar,de,it,fr,es,ru,zh,ja,ko', // All Indian languages + popular languages
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    
+        (function() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.body.appendChild(script);
+        })();
+        document.getElementById("backToTop").addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        function scrollToProducts() {
+    const productSection = document.getElementById('product-list');
+    const targetPosition = productSection.offsetTop;
+    const startPosition = window.pageYOffset; 
+    const distance = targetPosition - startPosition; 
+    const duration = 2000; 
+    let startTime = null;
+
+    function scrollAnimation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const scrollAmount = easeInOut(timeElapsed, startPosition, distance, duration);
+
+        window.scrollTo(0, scrollAmount);
+
+        if (timeElapsed < duration) {
+            requestAnimationFrame(scrollAnimation);
+        }
+    }
+    function easeInOut(time, start, change, duration) {
+        time /= duration / 2;
+        if (time < 1) return (change / 2) * time * time + start;
+        time--;
+        return (-change / 2) * (time * (time - 2) - 1) + start;
+    }
+
+    requestAnimationFrame(scrollAnimation);
+}
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if user is logged in (from localStorage)
+    const userLoggedIn = localStorage.getItem("userLoggedIn");
+
+    const signupBtn = document.getElementById("signupBtn");
+    const profileBtn = document.getElementById("profileBtn");
+
+    // If user is logged in, hide the signup button and show the profile button
+    if (userLoggedIn === "true") {
+        signupBtn.style.display = "none"; // Hide Sign Up button
+        profileBtn.style.display = "block"; // Show Profile button
+    } else {
+        signupBtn.style.display = "block"; // Show Sign Up button
+        profileBtn.style.display = "none"; // Hide Profile button
+    }
+});
+
+    </script>
+    
+    
+    
+
+</body>
+</html>

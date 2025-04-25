@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Handcrafts Shop</title>
+  <link rel="stylesheet" href="sell_ur_art.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
+  <script src="../script.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="./logo.jpg" alt="Handcrafts Shop Logo" />
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search products..." />
+    </div>
+    <div class="header-buttons">
+      <button onclick="location.href='../home.html'">
+        <i class="fas fa-home"></i> Home
+      </button>
+      <button onclick="location.href='../sellurart/sell_ur_art.html'">
+        <i class="fas fa-paint-brush"></i> Sell Your Art
+      </button>
+      <a href="../cart.html" id="cart-icon">
+        <div class="cart-icon-container">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-item-count">0</span>
+        </div>
+      </a>
+     
+
+    <!-- Profile Button (hidden by default) -->
+    <button id="profileBtn" onclick="location.href='../profile/profile.html'" style="display: none; background: none; border: none; padding: 0;">
+      <img src="./profile/profile.png" alt="Profile" style="width: 40px; height: 40px; border-radius: 50%;" />
+    </button>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="sell_art">
+    <img src="Art_background.jpg" alt="Sell Your Art" />
+  </section>
+
+  <!-- Scrolling text -->
+  <section class="scrolling-gallery">
+    <div class="gallery-text">
+      Get paid within 15 days | Sell your Paintings, Handcrafts...
+    </div>
+  </section>
+
+  <!-- Upload Section -->
+  <section class="upload">
+    <div class="left">
+      <h3>Sell Your Art</h3><br />
+      <h4>Limited Time Offer</h4>
+      <h4>Artist Registration Now ₹ 999, Actual Price ₹ 1999!</h4>
+      <button onclick="location.href='../login/sign-up.html'"></button>
+      <button class="Register" onclick="location.href='../register/Form/index.html'">Register</button>
+      <h4 class="note">Registration fee, Valid for 1 Year - ₹ 999 (Including Taxes)</h4>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="right">
+      <h2 class="details">How to Sell Your Paintings & Drawings?</h2>
+
+      <div class="step">
+        <input type="checkbox" id="step1" />
+        <label class="dropdown-label" for="step1">1. Register with Us</label>
+        <div class="dropdown-content">
+          <p>First step is to register by filling out the required details.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="checkbox" id="step2" />
+        <label class="dropdown-label" for="step2">2. Upload Your Work</label>
+        <div class="dropdown-content">
+          <p>Once you register and pay the registration fee, click on 'Upload Product'. Upload all your artworks one by one, with necessary information.</p>
+          <label for="fileUpload" class="file">Upload Artwork:</label><br />
+          <input type="file" id="fileUpload" /><br /><br />
+          <label for="price">Enter Price:</label>
+          <input type="text" id="price" placeholder="Enter price" />
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="checkbox" id="step3" />
+        <label class="dropdown-label" for="step3">3. Order Placed by Buyer</label>
+        <div class="dropdown-content">
+          <p>Once an order is placed, you will be notified via email.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <input type="checkbox" id="step4" />
+        <label class="dropdown-label" for="step4">4. Payment to Seller</label>
+        <div class="dropdown-content">
+          <p>You will receive payment within 7 days after successful delivery.</p>
+        </div>
+      </div>
+
+      <p class="promote">
+        We support artists by promoting their work through various channels, making it easier to sell art and for buyers to discover unique pieces.
+      </p>
+    </div>
+  </section>
+
+  
+</body>
+</html>

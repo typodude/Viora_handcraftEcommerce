@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafts Shop</title>
+    <link rel="stylesheet" href="phone.css">
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="../logo.jpg" alt="Handcrafts Shop Logo" />
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+        </div>
+        <div class="header-buttons">
+            <button onclick="location.href='../home.html'">
+                <i class="fas fa-home"></i> Home
+            </button>
+            <button onclick="location.href='../sellurart/sell_ur_art.html'">
+                <i class="fas fa-paint-brush"></i> Sell Your Art
+            </button>
+            <a href="../cart.html" id="cart-icon">
+                <div class="cart-icon-container">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-item-count">0</span>
+                </div>
+            </a>
+            
+            
+        </div>
+    </header>
+    
+    <section class="banner">
+        <img src="banner.jpg" alt="Arts and Paintings">
+        <div class="banner-overlay">
+            <h1>PHONE CASES</h1>
+            <button class="shop-now-btn" onclick="scrollToProducts()">SHOP NOW</button>
+        </div>
+    </section>
+    <section id="product-list" class="product-gallery">
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case1.jpg" alt="Phone Accessories">
+            <h3 class="title">Phone Accessories | Protective Cases</h3>
+            <p class="price">₹499</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case2.jpg" alt=" Cute 3D Bear Phone Case">
+            <h3 class="title">Cute 3D Bear Phone Case</h3>
+            <p class="price">₹599</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case3.jpg" alt="Floral Aesthetic Phone Cases ">
+            <h3 class="title">Floral Aesthetic Phone Cases</h3>
+            <p class="price">₹499</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case4.jpg" alt="Minimal Abstract Phone Case">
+            <h3 class="title">Minimal Abstract Phone Case</h3>
+            <p class="price">₹299</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case5.jpg" alt="Blue Tulip Aesthetic Phone Case">
+            <h3 class="title">Blue Tulip Aesthetic Phone Case</h3>
+            <p class="price">₹799</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case6.jpg" alt="Minimalist Abstract Floral Phone Case ">
+            <h3 class="title">Minimalist Abstract Floral Phone Case</h3>
+            <p class="price">₹549</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case7.jpg" alt="Blush Heart Aesthetic Phone Case">
+            <h3 class="title">Blush Heart Aesthetic Phone Case</h3>
+            <p class="price">₹699</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case8.jpg" alt="Happy Bear Cartoon Phone Case">
+            <h3 class="title">Happy Bear Cartoon Phone Case</h3>
+            <p class="price">₹899</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case9.jpg" alt="  Daisy Bloom Aesthetic Phone Case">
+            <h3 class="title">Daisy Bloom Aesthetic Phone Case</h3>
+            <p class="price">₹599</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case10.jpg" alt="Vintage Floral Aesthetic Phone Case">
+            <h3 class="title">Vintage Floral Aesthetic Phone Case</h3>
+            <p class="price">₹499</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case11.jpg" alt="Clear Blue Blossom Phone Case">
+            <h3 class="title">Clear Blue Blossom Phone Case</h3>
+            <p class="price">₹799</p>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    
+        <div class="product">
+            <i class="fas fa-heart like-btn"></i>
+            <img src="case12.jpg" alt="Sparkling Blue Floral Phone Case">
+            <h3 class="title">Sparkling Blue Floral Phone Case</h3>
+            <p class="price">₹749</p>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    </section>
+     
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Viora is your one-stop destination to explore beautiful handmade crafts including paintings, pottery, phone cases, and much more. We ensure top-quality, unique products loved by our community.</p>
+                <img src="../logo.jpg" alt="Viora Logo" class="footer-logo">
+            </div>
+    
+            <div class="footer-section">
+                <h3>Let us Help You</h3>
+                <p><a href="../login_viora/sign-up.html">Your Account</a></p>
+                <p><a href="../cart.html">Your Orders</a></p>
+                <p><a href="#">Shipping Rates and Policies</a></p>
+                <p><a href="#">Returns</a></p>
+                <p><a href="#">Help</a></p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <p><a href="../sellurart/sell_ur_art.html">Sell Your Art</a></p>
+                <p><a href="#trending">Trending Section</a></p>
+                <p><a href="#NewArrivals">New Arrivals</a></p>
+                <p><a href="#BestSellers">Bestsellers</a></p>
+                <p><a href="../offer/offer.html">Offer Page</a></p>
+            </div>
+    
+            <!-- Follow Us (next to Quick Links) -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="language-selector">
+                <!-- Google Translate Widget -->
+                <div id="google_translate_element"></div>
+            </div>
+            <p>100% ORIGINAL guarantee for all products at Viora | Return within 14 days of receiving your order</p>
+        </div>
+    
+        <button id="backToTop">Back to Top</button>
+    </footer>
+    
+    <!-- Add Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',  // Set your default page language
+                includedLanguages: 'en,hi,bn,te,ta,ml,gu,mr,kn,pa,or,as,mai,ur,ne,sd,si,ps,bo,sw,tl,ar,de,it,fr,es,ru,zh,ja,ko', // All Indian languages + popular languages
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    
+        (function() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.body.appendChild(script);
+        })();
+    
+    
+    
+    
+        document.getElementById("backToTop").addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        function scrollToProducts() {
+    const productSection = document.getElementById('product-list');
+    const targetPosition = productSection.offsetTop;
+    const startPosition = window.pageYOffset; 
+    const distance = targetPosition - startPosition; 
+    const duration = 2000; 
+    let startTime = null;
+
+    function scrollAnimation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const scrollAmount = easeInOut(timeElapsed, startPosition, distance, duration);
+
+        window.scrollTo(0, scrollAmount);
+
+        if (timeElapsed < duration) {
+            requestAnimationFrame(scrollAnimation);
+        }
+    }
+    function easeInOut(time, start, change, duration) {
+        time /= duration / 2;
+        if (time < 1) return (change / 2) * time * time + start;
+        time--;
+        return (-change / 2) * (time * (time - 2) - 1) + start;
+    }
+
+    requestAnimationFrame(scrollAnimation);
+}
+
+
+    </script>
+    
+    
+    
+
+</body>
+</html>
